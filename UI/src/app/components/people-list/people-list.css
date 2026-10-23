@@ -1,0 +1,35 @@
+.container {
+  max-width: 1200px;
+}
+
+.person-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #dee2e6;
+}
+
+.table th {
+  font-weight: 600;
+  color: #495057;
+  white-space: nowrap;
+}
+
+.table td {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.btn {
+  border-radius: 6px;
+}
