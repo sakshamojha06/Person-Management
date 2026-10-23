@@ -1,0 +1,8 @@
+# .NET build output and restored dependencies
+bin/
+obj/
+
+# IDE and user-specific files
+.vs/
+*.user
+*.suo
