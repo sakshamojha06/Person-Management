@@ -1,0 +1,15 @@
+.home-container {
+  min-height: calc(100vh - 68px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 15px;
+}
+
+.home-container h1 {
+  color: #212529;
+}
+
+.home-container p {
+  color: #666;
+}

@@ -1,0 +1,15 @@
+.navbar-brand {
+  font-size: 21px;
+}
+
+.nav-link {
+  margin-left: 12px;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+}
