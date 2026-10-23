@@ -48,7 +48,7 @@ public class PersonController: ControllerBase
         return Ok("Person updated successfully");
     }
 
-    [HttpDelete]
+    [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(int id)
     {
         var result = await _service.Delete(id);

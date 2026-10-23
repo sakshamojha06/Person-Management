@@ -24,12 +24,12 @@ export class PersonService {
     return this.http.post<Person>(this.apiUrl, person);
   }
 
-  update(id: number, person: Person): Observable<any> {
-    return this.http.put(`${this.apiUrl}/${id}`, person);
+  update(id: number, person: Person): Observable<string> {
+    return this.http.put(`${this.apiUrl}/${id}`, person, { responseType: 'text' });
   }
 
-  delete(id: number): Observable<any> {
-    return this.http.delete(`${this.apiUrl}/${id}`);
+  delete(id: number): Observable<string> {
+    return this.http.delete(`${this.apiUrl}/${id}`, { responseType: 'text' });
   }
 
   uploadPhoto(photo: File): Observable<any> {

@@ -30,4 +30,21 @@
   </div>
 </nav>
 
+@if (notification.message()) {
+  <div
+    class="alert alert-dismissible fade show shadow notification-toast"
+    [class.alert-success]="notification.type() === 'success'"
+    [class.alert-danger]="notification.type() === 'danger'"
+    role="alert"
+    aria-live="polite">
+    {{ notification.message() }}
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="notification.dismiss()">
+    </button>
+  </div>
+}
+
 <router-outlet></router-outlet>

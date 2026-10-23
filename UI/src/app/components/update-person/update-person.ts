@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 
 import { PersonService } from '../../services/person';
+import { NotificationService } from '../../services/notification';
 import { Person } from '../../models/person';
 
 @Component({
@@ -17,6 +18,7 @@ import { Person } from '../../models/person';
 export class UpdatePerson implements OnInit {
 
   private personService = inject(PersonService);
+  private notificationService = inject(NotificationService);
   private route = inject(ActivatedRoute);
   private router = inject(Router);
 
@@ -92,6 +94,7 @@ export class UpdatePerson implements OnInit {
 
     this.personService.update(this.personId, person).subscribe({
       next: () => {
+        this.notificationService.show('Person updated successfully.', 'success');
         this.router.navigate(['/people']);
       },
       error: (error) => {
