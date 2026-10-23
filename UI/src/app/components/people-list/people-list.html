@@ -24,8 +24,10 @@
 
   <div *ngIf="!isLoading() && errorMessage()" class="alert alert-danger">
     {{ errorMessage() }}
-    <button class="btn btn-sm btn-outline-danger ms-3"
-            (click)="loadPeople()">
+
+    <button
+      class="btn btn-sm btn-outline-danger ms-3"
+      (click)="loadPeople()">
       Retry
     </button>
   </div>
@@ -75,13 +77,19 @@
             <td>{{ person.age }}</td>
 
             <td class="text-center">
-              <button class="btn btn-sm btn-outline-primary me-2">
-                <i class="bi bi-pencil-square"></i>
-              </button>
 
+              <!-- Edit Button -->
+              <a
+                [routerLink]="['/update-person', person.id]"
+                class="btn btn-sm btn-outline-primary me-2">
+                <i class="bi bi-pencil-square"></i>
+              </a>
+
+              <!-- Delete Button -->
               <button class="btn btn-sm btn-outline-danger">
                 <i class="bi bi-trash"></i>
               </button>
+
             </td>
 
           </tr>

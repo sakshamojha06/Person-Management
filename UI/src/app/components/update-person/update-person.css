@@ -1,0 +1,44 @@
+
+.container {
+  max-width: 900px;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-header {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.form-label {
+  color: #343a40;
+}
+
+.form-control {
+  padding: 10px 12px;
+  border-radius: 6px;
+}
+
+.form-control:focus {
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+.current-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #dee2e6;
+}
+
+.btn {
+  border-radius: 6px;
+  padding: 9px 18px;
+}
+
+.alert {
+  border-radius: 6px;
+}
